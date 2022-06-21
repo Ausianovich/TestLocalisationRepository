@@ -1,0 +1,24 @@
+{
+  "configurations" : [
+    {
+      "id" : "032F6F1F-5037-4A57-AD70-FD657376B268",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:TestLocalisationProject.xcodeproj",
+        "identifier" : "2F039DB72861E9CC005F9E22",
+        "name" : "TestLocalisationProjectTests"
+      }
+    }
+  ],
+  "version" : 1
+}

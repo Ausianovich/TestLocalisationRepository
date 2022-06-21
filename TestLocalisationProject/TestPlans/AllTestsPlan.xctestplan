@@ -1,0 +1,31 @@
+{
+  "configurations" : [
+    {
+      "id" : "714C2F5B-7A8F-4F05-8BB0-F68B2EADB52D",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:TestLocalisationProject.xcodeproj",
+        "identifier" : "2F039DB72861E9CC005F9E22",
+        "name" : "TestLocalisationProjectTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:TestLocalisationProject.xcodeproj",
+        "identifier" : "2F039DC12861E9CC005F9E22",
+        "name" : "TestLocalisationProjectUITests"
+      }
+    }
+  ],
+  "version" : 1
+}

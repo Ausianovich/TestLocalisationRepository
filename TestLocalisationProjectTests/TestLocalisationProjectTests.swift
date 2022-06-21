@@ -17,4 +17,20 @@ class TestLocalisationProjectTests: XCTestCase {
     override func tearDown() {
         super.tearDown()
     }
+    
+    func testUKFileLabelLocalisation() {
+        let sut = ViewController()
+
+        let uploadButtonLabel = sut.testLabel.text
+
+        XCTAssertEqual(uploadButtonLabel, "test_key_ukrainian")
+    }
+    
+    func testENFileButtonLocalisation() {
+        let sut = ViewController()
+
+        let uploadButtonLabel = sut.testLabel.text
+
+        XCTAssertEqual(uploadButtonLabel, "test_key_english")
+    }
 }
