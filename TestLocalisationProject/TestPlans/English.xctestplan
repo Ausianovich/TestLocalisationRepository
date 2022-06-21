@@ -15,7 +15,8 @@
   "testTargets" : [
     {
       "selectedTests" : [
-        "TestLocalisationProjectTests\/testENFileButtonLocalisation()"
+        "TestLocalisationProjectTests\/testENFileButtonLocalisation()",
+        "TestLocalisationProjectTests\/testENFileButtonLocalisation_2()"
       ],
       "target" : {
         "containerPath" : "container:TestLocalisationProject.xcodeproj",

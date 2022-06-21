@@ -33,4 +33,12 @@ class TestLocalisationProjectTests: XCTestCase {
 
         XCTAssertEqual(uploadButtonLabel, "test_key_english")
     }
+    
+    func testENFileButtonLocalisation_2() {
+        let sut = ViewController()
+
+        let uploadButtonLabel = sut.testLabel.text
+
+        XCTAssertEqual(uploadButtonLabel, "test_key_english")
+    }
 }
