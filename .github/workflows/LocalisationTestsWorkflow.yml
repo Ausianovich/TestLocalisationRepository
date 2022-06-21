@@ -1,4 +1,4 @@
-name: Swift
+name: Check localisation strings by UnitTests
 
 on:
   pull_request:
