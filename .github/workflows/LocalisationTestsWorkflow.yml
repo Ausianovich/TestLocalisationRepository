@@ -10,6 +10,10 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
+  language_test_plan:
+    strategy:
+      matrix:
+        testPlan: [English, Ukrainian]
   build:
 
     runs-on: macos-11
@@ -20,7 +24,5 @@ jobs:
       run: sudo xcode-select -switch /Applications/Xcode_13.0.app && /usr/bin/xcodebuild -version
     - name: Build
       run: xcodebuild build-for-testing -scheme TestLocalisationProject build -destination 'platform=iOS Simulator,OS=15.0,name=iPhone 11 Pro'
-    - name: Run English Test Plan
-      run: xcodebuild test-without-building -scheme TestLocalisationProject -project TestLocalisationProject.xcodeproj -destination 'platform=iOS Simulator,name=iPhone 11 Pro,OS=15.0' -testPlan English
-    - name: Run Ukrainian Test Plan
-      run: xcodebuild test-without-building -scheme TestLocalisationProject -project TestLocalisationProject.xcodeproj -destination 'platform=iOS Simulator,name=iPhone 11 Pro,OS=15.0' -testPlan Ukrainian
+    - name: Run (${{ matrix.testPlan }}) Test Plan
+      run: xcodebuild test-without-building -scheme TestLocalisationProject -project TestLocalisationProject.xcodeproj -destination 'platform=iOS Simulator,name=iPhone 11 Pro,OS=15.0' -testPlan ${{ matrix.testPlan }}
