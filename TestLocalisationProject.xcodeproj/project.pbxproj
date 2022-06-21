@@ -8,9 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2F039DA62861E9CA005F9E22 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F039DA52861E9CA005F9E22 /* AppDelegate.swift */; };
-		2F039DA82861E9CA005F9E22 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F039DA72861E9CA005F9E22 /* SceneDelegate.swift */; };
 		2F039DAA2861E9CA005F9E22 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F039DA92861E9CA005F9E22 /* ViewController.swift */; };
-		2F039DAD2861E9CA005F9E22 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F039DAB2861E9CA005F9E22 /* Main.storyboard */; };
 		2F039DAF2861E9CC005F9E22 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F039DAE2861E9CC005F9E22 /* Assets.xcassets */; };
 		2F039DB22861E9CC005F9E22 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F039DB02861E9CC005F9E22 /* LaunchScreen.storyboard */; };
 		2F039DBD2861E9CC005F9E22 /* TestLocalisationProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F039DBC2861E9CC005F9E22 /* TestLocalisationProjectTests.swift */; };
@@ -39,9 +37,7 @@
 /* Begin PBXFileReference section */
 		2F039DA22861E9CA005F9E22 /* TestLocalisationProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestLocalisationProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F039DA52861E9CA005F9E22 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2F039DA72861E9CA005F9E22 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		2F039DA92861E9CA005F9E22 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		2F039DAC2861E9CA005F9E22 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2F039DAE2861E9CC005F9E22 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2F039DB12861E9CC005F9E22 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2F039DB32861E9CC005F9E22 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -51,11 +47,14 @@
 		2F039DC62861E9CC005F9E22 /* TestLocalisationProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLocalisationProjectUITests.swift; sourceTree = "<group>"; };
 		2F039DC82861E9CC005F9E22 /* TestLocalisationProjectUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLocalisationProjectUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		2F039DD92861EAF0005F9E22 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
-		2F039DDB2861EAFE005F9E22 /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/Main.strings; sourceTree = "<group>"; };
 		2F039DDC2861EAFE005F9E22 /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		2F039DDD2861EAFE005F9E22 /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/Localizable.strings; sourceTree = "<group>"; };
-		2F039DDF2861EB0B005F9E22 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		2F039DE12861EB0E005F9E22 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		2F039DE32861EBB9005F9E22 /* AllTestsPlan.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = AllTestsPlan.xctestplan; sourceTree = "<group>"; };
+		2F039DE42861EBCB005F9E22 /* UnitTestsPlan.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = UnitTestsPlan.xctestplan; sourceTree = "<group>"; };
+		2F039DE52861EBD3005F9E22 /* UITestsPlan.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = UITestsPlan.xctestplan; sourceTree = "<group>"; };
+		2F039DE62861EBE4005F9E22 /* English.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = English.xctestplan; sourceTree = "<group>"; };
+		2F039DE72861EBED005F9E22 /* Ukrainian.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = Ukrainian.xctestplan; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,11 +105,10 @@
 		2F039DA42861E9CA005F9E22 /* TestLocalisationProject */ = {
 			isa = PBXGroup;
 			children = (
+				2F039DE22861EB94005F9E22 /* TestPlans */,
 				2F039DD52861EAD5005F9E22 /* Resources */,
 				2F039DA52861E9CA005F9E22 /* AppDelegate.swift */,
-				2F039DA72861E9CA005F9E22 /* SceneDelegate.swift */,
 				2F039DA92861E9CA005F9E22 /* ViewController.swift */,
-				2F039DAB2861E9CA005F9E22 /* Main.storyboard */,
 				2F039DAE2861E9CC005F9E22 /* Assets.xcassets */,
 				2F039DB02861E9CC005F9E22 /* LaunchScreen.storyboard */,
 				2F039DB32861E9CC005F9E22 /* Info.plist */,
@@ -141,6 +139,18 @@
 				2F039DDA2861EAF0005F9E22 /* Localizable.strings */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		2F039DE22861EB94005F9E22 /* TestPlans */ = {
+			isa = PBXGroup;
+			children = (
+				2F039DE32861EBB9005F9E22 /* AllTestsPlan.xctestplan */,
+				2F039DE42861EBCB005F9E22 /* UnitTestsPlan.xctestplan */,
+				2F039DE52861EBD3005F9E22 /* UITestsPlan.xctestplan */,
+				2F039DE62861EBE4005F9E22 /* English.xctestplan */,
+				2F039DE72861EBED005F9E22 /* Ukrainian.xctestplan */,
+			);
+			path = TestPlans;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -251,7 +261,6 @@
 				2F039DB22861E9CC005F9E22 /* LaunchScreen.storyboard in Resources */,
 				2F039DD82861EAF0005F9E22 /* Localizable.strings in Resources */,
 				2F039DAF2861E9CC005F9E22 /* Assets.xcassets in Resources */,
-				2F039DAD2861E9CA005F9E22 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,7 +287,6 @@
 			files = (
 				2F039DAA2861E9CA005F9E22 /* ViewController.swift in Sources */,
 				2F039DA62861E9CA005F9E22 /* AppDelegate.swift in Sources */,
-				2F039DA82861E9CA005F9E22 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -315,16 +323,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		2F039DAB2861E9CA005F9E22 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2F039DAC2861E9CA005F9E22 /* Base */,
-				2F039DDB2861EAFE005F9E22 /* uk */,
-				2F039DDF2861EB0B005F9E22 /* en */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		2F039DB02861E9CC005F9E22 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -475,7 +473,6 @@
 				INFOPLIST_FILE = TestLocalisationProject/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -488,7 +485,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -504,7 +501,6 @@
 				INFOPLIST_FILE = TestLocalisationProject/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -517,7 +513,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

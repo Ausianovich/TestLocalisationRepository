@@ -1,0 +1,28 @@
+{
+  "configurations" : [
+    {
+      "id" : "CB2E28EF-92FC-4133-8599-4B680B26AD03",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "language" : "en",
+    "region" : "US"
+  },
+  "testTargets" : [
+    {
+      "selectedTests" : [
+        "TestLocalisationProjectTests\/testENFileButtonLocalisation()"
+      ],
+      "target" : {
+        "containerPath" : "container:TestLocalisationProject.xcodeproj",
+        "identifier" : "2F039DB72861E9CC005F9E22",
+        "name" : "TestLocalisationProjectTests"
+      }
+    }
+  ],
+  "version" : 1
+}
