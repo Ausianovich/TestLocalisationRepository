@@ -14,7 +14,7 @@ jobs:
     - name: Select Xcode
       run: sudo xcode-select -switch /Applications/Xcode_13.0.app && /usr/bin/xcodebuild -version
     - name: Build
-      run: swift build
+      run: xcodebuild -scheme TestLocalisationProject build -destination 'platform=iOS Simulator,OS=14.4,name=iPhone 11 Pro' | xcpretty && exit ${PIPESTATUS[0]}
     - name: Run English Test Plan
       run: xcodebuild test -scheme TestLocalisationProject -project TestLocalisationProject.xcodeproj -destination 'platform=iOS Simulator,name=iPhone 11 Pro,OS=14.4' -testPlan English | xcpretty && exit ${PIPESTATUS[0]}
     - name: Run Ukrainian Test Plan
