@@ -10,14 +10,11 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  test_plan_matrix:
+  build:
     strategy:
       matrix:
         testPlan: [English, Ukrainian]
-  build:
-
     runs-on: macos-11
-
     steps:
     - uses: actions/checkout@v3
     - name: Select Xcode
