@@ -1,4 +1,4 @@
-name: Check localisation strings by UnitTests
+name: Build project
 
 on:
   workflow_dispatch:
