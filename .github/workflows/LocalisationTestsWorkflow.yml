@@ -10,7 +10,7 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  build:
+  test:
     strategy:
       matrix:
         testPlan: [English, Ukrainian]
