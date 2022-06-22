@@ -17,12 +17,11 @@ jobs:
     - name: Select Xcode
       run: sudo xcode-select -switch /Applications/Xcode_13.0.app && /usr/bin/xcodebuild -version
     - name: Run ScreenshotsTestPlan
-      run: xcodebuild test -scheme TestLocalisationProject -project TestLocalisationProject.xcodeproj -destination 'platform=iOS Simulator,name=iPhone 11 Pro,OS=15.0' -testPlan ScreenshotsTestPlan
-    - name: Parse xcoderesult
+      run: xcodebuild -scheme TestLocalisationProject -resultBundlePath TestResults test -project TestLocalisationProject.xcodeproj -destination 'platform=iOS Simulator,name=iPhone 11 Pro,OS=15.0' -testPlan ScreenshotsTestPlan
+    - name: Parse XCResult
       uses: kishikawakatsumi/xcresulttool@v1
       with:
-        path: |
-          ~/Library/Developer/Xcode/DerivedData/TestLocalisationProject**/Logs/Test/*.xcresult
+        path: TestResults.xcresult
 #    - name: Archive test artifacts
 #      uses: actions/upload-artifact@v2
 #      with:
