@@ -2,8 +2,6 @@ name: Check localisation strings by UITests
 
 on:
   workflow_dispatch:
-  pull_request:
-    branches: ["master", "develop-**"]
   push:
     branches: ["master"]
     
@@ -13,14 +11,11 @@ concurrency:
 
 jobs:
   test:
-    strategy:
-      matrix:
-        testPlan: [UITestsPlan]
     runs-on: macos-11
     steps:
     - uses: actions/checkout@v3
     - name: Select Xcode
       run: sudo xcode-select -switch /Applications/Xcode_13.0.app && /usr/bin/xcodebuild -version
-    - name: Run ${{ matrix.testPlan }} Test Plan
-      run: xcodebuild test -scheme TestLocalisationProject -project TestLocalisationProject.xcodeproj -destination 'platform=iOS Simulator,name=iPhone 11 Pro,OS=15.0' -testPlan ${{ matrix.testPlan }}
+    - name: Run UITestsPlan
+      run: xcodebuild test -scheme TestLocalisationProject -project TestLocalisationProject.xcodeproj -destination 'platform=iOS Simulator,name=iPhone 11 Pro,OS=15.0' -testPlan UITestsPlan
 
