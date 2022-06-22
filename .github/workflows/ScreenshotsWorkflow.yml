@@ -20,6 +20,7 @@ jobs:
     #  run: xcodebuild test -scheme TestLocalisationProject -project TestLocalisationProject.xcodeproj -destination 'platform=iOS Simulator,name=iPhone 11 Pro,OS=15.0' -testPlan ScreenshotsTestPlan
     - name: Create temp directory
       run: |
+        cd ~
         cd downloads
         echo This is some text > myfile.txt
         cd ~
