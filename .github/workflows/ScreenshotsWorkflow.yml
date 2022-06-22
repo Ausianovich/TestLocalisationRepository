@@ -16,6 +16,17 @@ jobs:
     - uses: actions/checkout@v3
     - name: Select Xcode
       run: sudo xcode-select -switch /Applications/Xcode_13.0.app && /usr/bin/xcodebuild -version
-    - name: Run ScreenshotsTestPlan
-      run: xcodebuild test -scheme TestLocalisationProject -project TestLocalisationProject.xcodeproj -destination 'platform=iOS Simulator,name=iPhone 11 Pro,OS=15.0' -testPlan ScreenshotsTestPlan
+    #- name: Run ScreenshotsTestPlan
+    #  run: xcodebuild test -scheme TestLocalisationProject -project TestLocalisationProject.xcodeproj -destination 'platform=iOS Simulator,name=iPhone 11 Pro,OS=15.0' -testPlan ScreenshotsTestPlan
+    - name: Create temp directory
+      run: |
+        cd downloads
+        echo This is some text > myfile.txt
+        cd ~
+    - name: Use upload Artifacts
+      uses: actions/upload-artifact@v2
+      with:
+        name: Test_file_archive
+        path: downloads
+      
 
