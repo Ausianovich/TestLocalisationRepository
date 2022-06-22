@@ -21,7 +21,7 @@ jobs:
     - name: Install parser
       run: |
         brew install chargepoint/xcparse/xcparse
-        xcparse screenshots TestResults.xcresult "~/Desktop/Screenshots/"
+        xcparse screenshots TestResults.xcresult ~/Downloads
     - name: Parse XCResult
       uses: kishikawakatsumi/xcresulttool@v1
       with:
@@ -31,7 +31,7 @@ jobs:
       with:
         name: ArtifactArchive
         path: |
-          "~/Desktop/Screenshots"
+          ~/Downloads
 #    - name: Archive test artifacts
 #      uses: actions/upload-artifact@v2
 #      with:
