@@ -1,0 +1,27 @@
+{
+  "configurations" : [
+    {
+      "id" : "C2C258CD-230F-41A5-9B7D-58951BC8048E",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "testTimeoutsEnabled" : true
+  },
+  "testTargets" : [
+    {
+      "selectedTests" : [
+        "ScreenshotsTests\/testMakeUKScreenshot()"
+      ],
+      "target" : {
+        "containerPath" : "container:TestLocalisationProject.xcodeproj",
+        "identifier" : "2F039DC12861E9CC005F9E22",
+        "name" : "TestLocalisationProjectUITests"
+      }
+    }
+  ],
+  "version" : 1
+}

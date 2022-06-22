@@ -19,6 +19,7 @@
 		2F039DF12862E891005F9E22 /* Bundle+LocalizeAppName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F039DF02862E891005F9E22 /* Bundle+LocalizeAppName.swift */; };
 		2F039DF32862F12C005F9E22 /* Bundle+LocalizeAppName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F039DF02862E891005F9E22 /* Bundle+LocalizeAppName.swift */; };
 		2F039DF42862F49C005F9E22 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2F039DEE2862E758005F9E22 /* InfoPlist.strings */; };
+		2F039DF6286317D7005F9E22 /* ScreenshotsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F039DF5286317D7005F9E22 /* ScreenshotsTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,8 @@
 		2F039DED2862E758005F9E22 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2F039DEF2862E759005F9E22 /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2F039DF02862E891005F9E22 /* Bundle+LocalizeAppName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+LocalizeAppName.swift"; sourceTree = "<group>"; };
+		2F039DF5286317D7005F9E22 /* ScreenshotsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenshotsTests.swift; sourceTree = "<group>"; };
+		2F039DF728631B40005F9E22 /* ScreenshotsTestPlan.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = ScreenshotsTestPlan.xctestplan; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				2F039DC62861E9CC005F9E22 /* TestLocalisationProjectUITests.swift */,
+				2F039DF5286317D7005F9E22 /* ScreenshotsTests.swift */,
 				2F039DE82862E6CD005F9E22 /* Springboard.swift */,
 			);
 			path = TestLocalisationProjectUITests;
@@ -154,6 +158,7 @@
 			isa = PBXGroup;
 			children = (
 				2F039DE32861EBB9005F9E22 /* AllTestsPlan.xctestplan */,
+				2F039DF728631B40005F9E22 /* ScreenshotsTestPlan.xctestplan */,
 				2F039DE42861EBCB005F9E22 /* UnitTestsPlan.xctestplan */,
 				2F039DE52861EBD3005F9E22 /* UITestsPlan.xctestplan */,
 				2F039DE62861EBE4005F9E22 /* English.xctestplan */,
@@ -315,6 +320,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2F039DF32862F12C005F9E22 /* Bundle+LocalizeAppName.swift in Sources */,
+				2F039DF6286317D7005F9E22 /* ScreenshotsTests.swift in Sources */,
 				2F039DC72861E9CC005F9E22 /* TestLocalisationProjectUITests.swift in Sources */,
 				2F039DE92862E6CD005F9E22 /* Springboard.swift in Sources */,
 			);

@@ -10,7 +10,6 @@ import XCTest
 
 class TestLocalisationProjectUITests: XCTestCase {
     var app: XCUIApplication!
-    var appName: String!
 
     override func setUp() {
         super.setUp()
