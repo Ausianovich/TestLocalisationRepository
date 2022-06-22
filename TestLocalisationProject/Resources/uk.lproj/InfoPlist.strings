@@ -1,0 +1,10 @@
+/* 
+  InfoPlist.strings
+  TestLocalisationProject
+
+  Created by Kanstantsin Ausianovich on 22.06.22.
+  
+*/
+
+/*@ Display name of the app */
+"CFBundleDisplayName" = "Ukrainian name";
