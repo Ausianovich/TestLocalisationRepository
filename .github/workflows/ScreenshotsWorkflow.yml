@@ -18,10 +18,20 @@ jobs:
       run: sudo xcode-select -switch /Applications/Xcode_13.0.app && /usr/bin/xcodebuild -version
     - name: Run ScreenshotsTestPlan
       run: xcodebuild -scheme TestLocalisationProject -resultBundlePath TestResults test -project TestLocalisationProject.xcodeproj -destination 'platform=iOS Simulator,name=iPhone 11 Pro,OS=15.0' -testPlan ScreenshotsTestPlan
+    - name: Install parser
+      run: |
+        brew install chargepoint/xcparse/xcparse
+        xcparse screenshots TestResults.xcresult "~/Desktop/Screenshots/"
     - name: Parse XCResult
       uses: kishikawakatsumi/xcresulttool@v1
       with:
         path: TestResults.xcresult
+    - name: Archive artifacts
+      uses: actions/upload-artifact@v2
+      with:
+        name: ArtifactArchive
+        path: |
+          "~/Desktop/Screenshots"
 #    - name: Archive test artifacts
 #      uses: actions/upload-artifact@v2
 #      with:
