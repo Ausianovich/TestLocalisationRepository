@@ -6,36 +6,76 @@
 //
 
 import XCTest
+@testable import TestLocalisationProject
 
 class TestLocalisationProjectUITests: XCTestCase {
+    var app: XCUIApplication!
+    var appName: String!
 
-//    override func setUpWithError() throws {
-//        // Put setup code here. This method is called before the invocation of each test method in the class.
-//
-//        // In UI tests it is usually best to stop immediately when a failure occurs.
-//        continueAfterFailure = false
-//
-//        // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
-//    }
-//
-//    override func tearDownWithError() throws {
-//        // Put teardown code here. This method is called after the invocation of each test method in the class.
-//    }
-//
-//    func testExample() throws {
-//        // UI tests must launch the application that they test.
-//        let app = XCUIApplication()
-//        app.launch()
-//
-//        // Use XCTAssert and related functions to verify your tests produce the correct results.
-//    }
-//
-//    func testLaunchPerformance() throws {
-//        if #available(macOS 10.15, iOS 13.0, tvOS 13.0, watchOS 7.0, *) {
-//            // This measures how long it takes to launch your application.
-//            measure(metrics: [XCTApplicationLaunchMetric()]) {
-//                XCUIApplication().launch()
-//            }
-//        }
-//    }
+    override func setUp() {
+        super.setUp()
+        self.deleteApp()
+        
+        continueAfterFailure = false
+        self.app = XCUIApplication()
+        
+        //Reset Authorisation status of camera and photo gallery
+        if #available(iOS 13.4, *) {
+            self.app.resetAuthorizationStatus(for: .camera)
+            self.app.resetAuthorizationStatus(for: .photos)
+        }
+    }
+    
+    override func tearDown() {
+        self.app = nil
+
+        self.deleteApp()
+        super.tearDown()
+    }
+    
+    private func deleteApp() {
+        let currentSystemLocaleIdentifier: String = String(Locale.current.identifier.prefix(2))
+        let testBundle = Bundle(for: type(of: self ))
+        let appName = testBundle.text(forKey: "CFBundleDisplayName", inTable: "InfoPlist", forLanguage: currentSystemLocaleIdentifier)
+        Springboard.deleteApp(appName)
+    }
+    
+    //MARK: - Common methods
+    
+    private func checkStaticText(_ identifier: String, wait timeout: TimeInterval = 0.0, font: UIFont? = nil, numberOfLines: Int = 0) {
+
+        let label = self.app.staticTexts[identifier]
+        if timeout > 0.0 {
+            _ = label.waitForExistence(timeout: timeout)
+        }
+        
+        if let font = font {
+            XCTAssertFalse(self.checkIsTruncatedUILabel(with: identifier, font: font, labelSize: label.frame.size, numberOfLines: numberOfLines))
+        }
+
+        XCTAssertTrue(label.exists, "Don't find \(identifier)")
+    }
+    
+    private func checkIsTruncatedUILabel(with text: String, font: UIFont, labelSize: CGSize, numberOfLines: Int = 0) -> Bool {
+        let textSize = (text as NSString).boundingRect(with: CGSize(width: labelSize.width, height: .greatestFiniteMagnitude),
+                                                       options: numberOfLines > 0 ? .usesDeviceMetrics : .usesLineFragmentOrigin,
+                                                       attributes: [.font: font],
+                                                       context: nil).size
+        
+        return textSize.height > labelSize.height || textSize.width > labelSize.width
+    }
+    
+    func testUKLocalization() throws {
+        self.app.launchArguments += ["-AppleLanguages", "(uk)", "-AppleLocale", "uk_UK"]
+        self.app.launch()
+        
+        self.checkStaticText("test_key_ukrainian", wait: 2.0)
+    }
+    
+    func testENLocalization() throws {
+        self.app.launchArguments += ["-AppleLanguages", "(en)", "-AppleLocale", "en_US"]
+        self.app.launch()
+        
+        self.checkStaticText("test_key_english", wait: 2.0)
+    }
 }
