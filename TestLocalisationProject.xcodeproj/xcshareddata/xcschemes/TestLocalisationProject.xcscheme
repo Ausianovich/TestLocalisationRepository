@@ -44,6 +44,9 @@
          <TestPlanReference
             reference = "container:TestLocalisationProject/TestPlans/Ukrainian.xctestplan">
          </TestPlanReference>
+         <TestPlanReference
+            reference = "container:TestLocalisationProject/TestPlans/ScreenshotsTestPlan.xctestplan">
+         </TestPlanReference>
       </TestPlans>
       <Testables>
          <TestableReference

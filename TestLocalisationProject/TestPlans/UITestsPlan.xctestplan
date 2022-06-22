@@ -13,6 +13,9 @@
   },
   "testTargets" : [
     {
+      "skippedTests" : [
+        "ScreenshotsTests"
+      ],
       "target" : {
         "containerPath" : "container:TestLocalisationProject.xcodeproj",
         "identifier" : "2F039DC12861E9CC005F9E22",
