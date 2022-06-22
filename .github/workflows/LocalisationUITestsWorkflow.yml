@@ -1,4 +1,4 @@
-name: Check localisation strings by UnitTests
+name: Check localisation strings by UITests
 
 on:
   workflow_dispatch:
