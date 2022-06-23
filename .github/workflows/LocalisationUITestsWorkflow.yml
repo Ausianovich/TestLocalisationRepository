@@ -10,7 +10,7 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  test:
+  Run_Localisation_UITests:
     runs-on: macos-11
     steps:
     - uses: actions/checkout@v3

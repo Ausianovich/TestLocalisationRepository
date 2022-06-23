@@ -2,8 +2,8 @@ name: Check localisation strings by UnitTests
 
 on:
   workflow_dispatch:
-#  pull_request:
-#    branches: ["master", "develop-**"]
+  pull_request:
+    branches: ["master", "develop-**"]
   push:
     branches: ["master"]
     
@@ -12,7 +12,7 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  test:
+  Run_Localisation_Unit_Tests:
     strategy:
       matrix:
         testPlan: [English, Ukrainian]

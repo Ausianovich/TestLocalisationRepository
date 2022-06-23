@@ -10,7 +10,7 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  test:
+  Make_screenshots:
     runs-on: macos-11
     steps:
     - uses: actions/checkout@v3
@@ -32,11 +32,5 @@ jobs:
         name: ArtifactArchive
         path: |
           ~/Downloads
-#    - name: Archive test artifacts
-#      uses: actions/upload-artifact@v2
-#      with:
-#        name: test-artifacts
-#        path: |
-#          ~/Library/Developer/Xcode/DerivedData/TestLocalisationProject**/Logs/Test/*.xcresult
 
 
