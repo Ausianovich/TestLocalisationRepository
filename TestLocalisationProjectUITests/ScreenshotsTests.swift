@@ -53,5 +53,11 @@ class ScreenshotsTests: XCTestCase {
         self.takeScreenshot(name: "Main_screen")
     }
     
+    func testMakeENScreenshot() {
+        self.app.launchArguments += ["-AppleLanguages", "(en)", "-AppleLocale", "en_US"]
+        self.app.launch()
+        
+        self.takeScreenshot(name: "Main_screen")
+    }
 
 }
