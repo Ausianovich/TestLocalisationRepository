@@ -17,5 +17,5 @@ jobs:
     - name: Select Xcode
       run: sudo xcode-select -switch /Applications/Xcode_13.0.app && /usr/bin/xcodebuild -version
     - name: Run UITestsPlan
-      run: xcodebuild test -scheme TestLocalisationProject -project TestLocalisationProject.xcodeproj -destination 'platform=iOS Simulator,name=iPhone 11 Pro,OS=15.0' -testPlan UITestsPlan
+      run: xcodebuild test -scheme TestLocalisationProject -workspace TestLocalisationProject.xcworkspace -destination 'platform=iOS Simulator,name=iPhone 11 Pro,OS=15.0' -testPlan UITestsPlan
 

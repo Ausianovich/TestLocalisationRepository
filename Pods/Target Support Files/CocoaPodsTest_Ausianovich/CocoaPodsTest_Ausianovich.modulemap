@@ -1,0 +1,6 @@
+framework module CocoaPodsTest_Ausianovich {
+  umbrella header "CocoaPodsTest_Ausianovich-umbrella.h"
+
+  export *
+  module * { export * }
+}
