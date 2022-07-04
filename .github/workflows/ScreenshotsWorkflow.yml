@@ -15,7 +15,7 @@ jobs:
     - name: Select Xcode
       run: sudo xcode-select -switch /Applications/Xcode_13.0.app && /usr/bin/xcodebuild -version
     - name: Run ScreenshotsTestPlan
-      run: xcodebuild -scheme TestLocalisationProject -resultBundlePath TestResults test -workspace TestLocalisationProject.xcworkspace -destination 'platform=iOS Simulator,name=iPhone 11 Pro,OS=15.0' -testPlan ScreenshotsTestPlan
+      run: xcodebuild test -workspace TestLocalisationProject.xcworkspace -destination 'platform=iOS Simulator,name=iPhone 11 Pro,OS=15.0' -scheme TestLocalisationProject -resultBundlePath TestResults -testPlan ScreenshotsTestPlan
     - name: Install parser
       run: |
         brew install chargepoint/xcparse/xcparse

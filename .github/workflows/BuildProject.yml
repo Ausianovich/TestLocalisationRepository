@@ -19,4 +19,4 @@ jobs:
     - name: Select Xcode
       run: sudo xcode-select -switch /Applications/Xcode_13.0.app && /usr/bin/xcodebuild -version
     - name: Build
-      run: xcodebuild build-for-testing -scheme TestLocalisationProject build -destination 'platform=iOS Simulator,OS=15.0,name=iPhone 11 Pro'
+      run: xcodebuild build-for-testing -workspace TestLocalisationProject.xcworkspace -scheme TestLocalisationProject build -destination 'platform=iOS Simulator,OS=15.0,name=iPhone 11 Pro'

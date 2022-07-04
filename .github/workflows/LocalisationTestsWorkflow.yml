@@ -22,5 +22,5 @@ jobs:
     - name: Select Xcode
       run: sudo xcode-select -switch /Applications/Xcode_13.0.app && /usr/bin/xcodebuild -version
     - name: Run ${{ matrix.testPlan }} Test Plan
-      run: xcodebuild test -scheme TestLocalisationProject -workspace TestLocalisationProject.xcworkspace -destination 'platform=iOS Simulator,name=iPhone 11 Pro,OS=15.0' -testPlan ${{ matrix.testPlan }}
+      run: xcodebuild test -workspace TestLocalisationProject.xcworkspace -scheme TestLocalisationProject -destination 'platform=iOS Simulator,name=iPhone 11 Pro,OS=14.4' -testPlan ${{ matrix.testPlan }}
 
