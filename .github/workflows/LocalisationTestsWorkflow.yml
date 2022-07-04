@@ -12,7 +12,7 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  test:
+  Run_Localisation_Unit_Tests:
     strategy:
       matrix:
         testPlan: [English, Ukrainian]
@@ -22,5 +22,5 @@ jobs:
     - name: Select Xcode
       run: sudo xcode-select -switch /Applications/Xcode_13.0.app && /usr/bin/xcodebuild -version
     - name: Run ${{ matrix.testPlan }} Test Plan
-      run: xcodebuild test -scheme TestLocalisationProject -project TestLocalisationProject.xcodeproj -destination 'platform=iOS Simulator,name=iPhone 11 Pro,OS=15.0' -testPlan ${{ matrix.testPlan }}
+      run: xcodebuild test -workspace TestLocalisationProject.xcworkspace -scheme TestLocalisationProject -destination 'platform=iOS Simulator,name=iPhone 11 Pro,OS=15.0' -testPlan ${{ matrix.testPlan }}
 
